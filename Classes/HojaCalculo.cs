@@ -533,6 +533,7 @@ namespace Horarios.Classes
             string[] horas = horario.Split("-");
             double[] k = { 0,0,0,0,0,0,0};
             k[0] = devuelveMinutos(horas[0], horas[1]);  //Número de Minutos entre horas
+            //
             //k[1] = (((int)(k[0] / 30))) + ((k[0] % 30 > 0) ? 1 : 0); //Número de Filas que necesita replicarse
             k[1] = ((int)(k[0]) / 45) * 2;//Número de Filas que necesita replicarse
             k[2] = (int)(((30* k[1]) * porcentajeHoraSincrona) / 30);
